@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Pendaftaran</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
+        form { max-width: 400px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        div { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; }
+        .inline-label { display: inline; font-weight: normal; margin-right: 10px; }
+        
+        /* Gaya untuk input teks, password, dan dropdown */
+        input[type="text"], input[type="password"], select { 
+            width: 100%; 
+            padding: 8px; 
+            box-sizing: border-box; 
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button-group { margin-top: 20px; }
+        button { padding: 10px 15px; cursor: pointer; border-radius: 5px; border: none; font-weight: bold; }
+        .btn-submit { background-color: grey; color: white; }
+        .btn-reset { background-color: grey; color: white; }
+    </style>
+</head>
+<body>
+<center>
+    <h2>Formulir Data Diri</h2>
+
+    <form action="terimakasih.html" method="GET">
+        
+        <div>
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div>
+            <label>Jenis Kelamin:</label>
+            <input type="radio" id="laki" name="gender" value="Laki-laki">
+            <label for="laki" class="inline-label">Laki-laki</label>
+            <input type="radio" id="perempuan" name="gender" value="Perempuan">
+            <label for="perempuan" class="inline-label">Perempuan</label>
+        </div>
+
+        <div>
+            <label for="hewan">Binatang Kesayangan:</label>
+            <select id="hewan" name="hewan">
+                <option value="">-- Pilih Binatang --</option>
+                <option value="Kucing">Kucing</option>
+                <option value="Kelinci">Kelinci</option>
+                <option value="Hamster">Hamster</option>
+                <option value="Sapi">Sapi</option>
+                <option value="Harimau">Harimau</option>
+            </select>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn-submit">Kirim Data</button>
+            <button type="reset" class="btn-reset">Hapus Formulir</button>
+        </div>
+    </form>
+</center>
+</body>
+</html>
