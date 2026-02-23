@@ -1,99 +1,141 @@
-<html>
-    <head>
-        <title> Desain tanpa table </title>
-    <style type="text/css">
-    #main{
-        width: 100%;
-        margin:0 auto;
-        border: 1px solid 804040;
-        padding: 1px;
-        background-color: 804040;
-    }
-    #header{
-        padding: 1px;
-        margin: 1px;
-        margin: 1px;
-        border: 1px solid white;
-        text-align: center;
-        height: 100px;
-        color: white;
-        font-size: 50px;
-        background-image:url('gajah.png');
-    }
-      .navbar-nav {
-    width: 100%;
-    text-align: center;
-    background-color: greenyellow;
-    > li {
-      float: none;
-      display: inline-block;
-    }
-  }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Evergreen Hotel & Cottage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #a8bb7a;
+        }
 
-    #menu-kanan{
-        width: 14%;
-        float: right;
-        border: 1px solid yellow;
-        margin-left: 2px;
-        background-color: 804040;
-        border-radius: 5px;
-        color: white;
-    }
-    #isi-tengah{
-        width: 70%;
-        float: left;
-        border: 1px solid blue;
-        background-color: #ffa980;
-    }
-    .bersih{
-        float: none;
-        clear: both;
-    }
-    #footer{
-        padding: 1px;
-        margin: 1px;
-        border: 1px solid orange;
-        text-align: center;
-        background-color: #ffc5a8;
-    }
-    a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-}
-</style>
+        .container {
+            width: 900px;
+            margin: 20px auto;
+            background: #f4f4f4;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 5px solid white;
+        }
+
+        .header img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .navbar {
+            background-color: #7c8f4d;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px;
+        }
+
+        .left {
+            width: 65%;
+            padding-right: 20px;
+            border-right: 2px solid #ffffff;
+        }
+
+        .right {
+            width: 35%;
+            padding-left: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .news-title {
+            color: #7c8f4d;
+        }
+
+        p {
+            color: purple;
+            line-height: 1.6;
+        }
+
+        .news-section h3 {
+            margin-bottom: 5px;
+        }
+
+    </style>
 </head>
 <body>
-    <div id="main">
-        <div id="header"></div>
-    </div>
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="pull-left"><a href="#">Dashboard</a></li>
-        <li class="active"><a href="#">Stories</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Photos</a></li>
-        <li class="social pull-right"><a href="#">Social Links</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
 
-        <div id="isi-tengah">
-        <br> saya bahagia <br>
-        <br> saya sehat <br>
-        <br> saya cantik <br>
-        <br> saya kuat <br>
-        <br> saya hebat <br>
-        <br> saya sukses <br>
-        <br> saya kaya <br>
-        <br> saya CEO <br>
-        <br> saya bahagia <br>
-        <br> saya sehat <br>
-        <br> saya kuat <br>
-        </div>
+<div class="container">
+
+    <div class="header">
+        <img src="evergreen.jpg" alt="Hotel">
     </div>
-            <div class="bersih"></div>
-        <div id="footer"> @tpl62 </div>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Profil</a>
+        <a href="#">Fasilitas</a>
+        <a href="#">Panorama</a>
+        <a href="#">Peta</a>
+    </div>
+
+    <div class="content">
+
+        <div class="left">
+            <h2>Profil</h2>
+            <p>
+                Evergreen Hotel & Cottage terletak di alam perbukitan yang sejuk alami 
+                serta dikelilingi gemericik sungai Ciliwung dan Cisampai yang mengalir 
+                dengan panorama alam yang indah.
+            </p>
+
+            <p>
+                Evergreen Hotel & Cottage terletak di alam perbukitan yang sejuk alami 
+                serta dikelilingi gemericik sungai Ciliwung dan Cisampai yang mengalir 
+                dengan panorama alam yang indah.
+            </p>
+        </div>
+
+        <div class="right">
+            <h2 class="news-title">News</h2>
+
+            <div class="news-section">
+                <h3>Taman Bermain</h3>
+                <p>
+                    Evergreen akan membangun sebuah taman bermain yang disediakan 
+                    bagi pengunjung dan umum. Taman bermain ini akan dibuka pada bulan 
+                    Agustus 2020.
+                </p>
+            </div>
+
+            <div class="news-section">
+                <h3>Tournament</h3>
+                <p>
+                    Evergreen akan mengadakan tournament tahunan yang dapat diikuti 
+                    oleh pengunjung hotel. Acara ini akan dilaksanakan pada bulan 
+                    Agustus 2020.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
 </html>
