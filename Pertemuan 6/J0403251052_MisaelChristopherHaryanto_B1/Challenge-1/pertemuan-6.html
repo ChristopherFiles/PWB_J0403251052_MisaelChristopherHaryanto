@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Evergreen Hotel & Cottage</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #a8bb7a;
+}
+
+/* Container */
+.container {
+    width: 900px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.header {
+    position: relative;
+}
+
+.header img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Text di atas gambar */
+#header_text {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #6f8442;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #dfe8c8;
+    text-decoration: underline;
+}
+
+/* Content */
+.content {
+    display: flex;
+    padding: 30px;
+}
+
+/* Left Content */
+.left {
+    width: 65%;
+    padding-right: 25px;
+    border-right: 1px solid #ddd;
+}
+
+/* Right Content */
+.right {
+    width: 35%;
+    padding-left: 25px;
+}
+
+/* Heading */
+h2 {
+    margin-top: 0;
+    color: #6f8442;
+}
+
+/* Paragraf */
+p {
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* News Section */
+.news-section {
+    margin-bottom: 20px;
+}
+
+.news-section h3 {
+    margin-bottom: 8px;
+    color: #6f8442;
+}
+    </style>
+</head>
+<body>
+
+<link rel="stylesheet" href="style.css">
+<div class="container">
+
+    <div class="header">
+        <img src="header.jpg" alt="Hotel">
+    </div>
+                <div id="header_text">
+                <p>Keserasian Alam dan Pelayanan</p>
+            </div>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Profil</a>
+        <a href="#">Fasilitas</a>
+        <a href="#">Panorama</a>
+        <a href="#">Peta</a>
+    </div>
+
+    <div class="content">
+
+        <div class="left">
+            <h2>Profil</h2>
+            <p>
+                Evergreen Hotel & Cottage terletak di alam perbukitan yang sejuk alami 
+                serta dikelilingi gemericik sungai Ciliwung dan Cisampai yang mengalir 
+                dengan panorama alam yang indah.
+            </p>
+
+            <p>
+                Evergreen Hotel & Cottage terletak di alam perbukitan yang sejuk alami 
+                serta dikelilingi gemericik sungai Ciliwung dan Cisampai yang mengalir 
+                dengan panorama alam yang indah.
+            </p>
+        </div>
+
+        <div class="right">
+            <h2 class="news-title">News</h2>
+
+            <div class="news-section">
+                <h3>Taman Bermain</h3>
+                <p>
+                    Evergreen akan membangun sebuah taman bermain yang disediakan 
+                    bagi pengunjung dan umum. Taman bermain ini akan dibuka pada bulan 
+                    Agustus 2020.
+                </p>
+            </div>
+
+            <div class="news-section">
+                <h3>Tournament</h3>
+                <p>
+                    Evergreen akan mengadakan tournament tahunan yang dapat diikuti 
+                    oleh pengunjung hotel. Acara ini akan dilaksanakan pada bulan 
+                    Agustus 2020.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

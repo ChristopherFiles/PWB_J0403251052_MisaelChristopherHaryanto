@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Range Rover Gallery</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor"></div>
+
+    <!-- LOGO -->
+    <div class="logo">
+        <h1>RANGE ROVER</h1>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top glass-navbar">
+        <div class="container text-center">
+            <ul class="nav navbar-nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Profile</a></li>
+                <li class="active"><a href="">Gallery</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="container main-content">
+        <div class="content-box">
+            
+            <div class="page-header text-center">
+                <h1>Range Rover</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <img src="images/rr-1.jpg" class="img-thumbnail" />
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <img src="images/rr-2.jpg" class="img-thumbnail" />
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <img src="images/rr-3.jpg" class="img-thumbnail" />
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <img src="images/rr-4.jpg" class="img-thumbnail" />
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <img src="images/rr-5.jpg" class="img-thumbnail" />
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <img src="images/rr-6.jpg" class="img-thumbnail" />
+                </div>
+            </div>
+
+            <hr />
+            <footer class="text-center">
+                Copyright &copy; 2026
+            </footer>
+
+        </div>
+    </div>
+
+<script>
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", e => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+    });
+
+    document.querySelectorAll("a, img").forEach(el => {
+        el.addEventListener("mouseover", () => {
+            cursor.classList.add("cursor-grow");
+        });
+        el.addEventListener("mouseleave", () => {
+            cursor.classList.remove("cursor-grow");
+        });
+    });
+</script>
+
+</body>
+</html>
