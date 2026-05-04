@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 640" role="img" aria-label="Paket galon dan dispenser">
+  <defs>
+    <linearGradient id="body" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".55" stop-color="#dff2f7"/>
+      <stop offset="1" stop-color="#9ed6e6"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="1">
+      <stop offset="0" stop-color="#57b8e5" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#18a591" stop-opacity=".4"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <ellipse cx="430" cy="575" rx="270" ry="42" fill="#1f6b87" opacity=".14" filter="url(#soft)"/>
+  <rect x="312" y="224" width="236" height="338" rx="8" fill="url(#body)" stroke="#fff" stroke-width="10"/>
+  <rect x="345" y="282" width="170" height="76" rx="8" fill="#ffffff" opacity=".76"/>
+  <circle cx="392" cy="402" r="28" fill="#167fb9" opacity=".9"/>
+  <circle cx="468" cy="402" r="28" fill="#19a88f" opacity=".9"/>
+  <path d="M390 454h82v42c0 23-18 41-41 41s-41-18-41-41v-42Z" fill="#f3fbfd" stroke="#fff" stroke-width="8"/>
+  <path d="M330 64h200l19 86c8 35-10 67-43 80H354c-34-13-51-45-43-80l19-86Z" fill="#eefcff" stroke="#fff" stroke-width="9"/>
+  <path d="M335 152c60-21 116-16 170 15 11 6 22 10 34 12-7 23-22 40-45 49H366c-25-10-41-28-47-53 5-8 11-16 16-23Z" fill="url(#water)"/>
+  <rect x="359" y="88" width="142" height="52" rx="8" fill="#22a5c8"/>
+  <text x="430" y="329" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="800" fill="#16637d">BINTANG</text>
+</svg>

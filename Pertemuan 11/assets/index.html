@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depot Air Bintang | Pemesanan Air Galon</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+
+    <header class="topbar glass-panel">
+      <a class="brand" href="#order" aria-label="Depot Air Bintang">
+        <span class="brand-mark">B</span>
+        <span>
+          <strong>Depot Air Bintang</strong>
+          <small>Air galon siap antar</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#order" data-route="order">Pemesanan</a>
+        <a href="#track" data-route="track">Lacak</a>
+      </nav>
+      <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Buka menu" title="Buka menu">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <section class="route active" id="orderRoute" data-page="order">
+        <div class="tesla-scroll" id="productStage" aria-label="Daftar produk">
+          <section class="product-scene scene-mineral" data-product-id="galon-mineral">
+            <div class="scene-media" aria-hidden="true">
+              <img src="assets/galon-mineral.svg" alt="" />
+            </div>
+            <div class="scene-copy glass-panel">
+              <p class="eyebrow">Mineral segar</p>
+              <h1>Galon Bintang Mineral</h1>
+              <p>Air mineral 19 liter untuk rumah, kos, dan kantor kecil.</p>
+              <div class="scene-actions">
+                <button class="primary-btn choose-product" type="button" data-product-id="galon-mineral">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                  Pesan Sekarang
+                </button>
+                <span class="price-badge">Rp 18.000</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="product-scene scene-alkali" data-product-id="galon-alkali">
+            <div class="scene-media" aria-hidden="true">
+              <img src="assets/galon-alkali.svg" alt="" />
+            </div>
+            <div class="scene-copy glass-panel">
+              <p class="eyebrow">pH seimbang</p>
+              <h2>Galon Bintang Alkali</h2>
+              <p>Pilihan premium 19 liter dengan rasa ringan dan finish bersih.</p>
+              <div class="scene-actions">
+                <button class="primary-btn choose-product" type="button" data-product-id="galon-alkali">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                  Pesan Sekarang
+                </button>
+                <span class="price-badge">Rp 23.000</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="product-scene scene-dispenser" data-product-id="paket-dispenser">
+            <div class="scene-media" aria-hidden="true">
+              <img src="assets/paket-dispenser.svg" alt="" />
+            </div>
+            <div class="scene-copy glass-panel">
+              <p class="eyebrow">Paket hemat</p>
+              <h2>Paket Galon + Dispenser</h2>
+              <p>Paket praktis untuk pelanggan baru dan kebutuhan event kecil.</p>
+              <div class="scene-actions">
+                <button class="primary-btn choose-product" type="button" data-product-id="paket-dispenser">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                  Pesan Sekarang
+                </button>
+                <span class="price-badge">Rp 52.000</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="order-dock glass-panel" aria-label="Form pemesanan">
+          <div class="dock-header">
+            <div>
+              <p class="eyebrow">Checkout</p>
+              <h2>Pesanan Air Galon</h2>
+            </div>
+            <button class="icon-button" id="collapseOrder" type="button" aria-label="Sembunyikan form" title="Sembunyikan form">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M18 15l-6-6-6 6" />
+              </svg>
+            </button>
+          </div>
+          <form id="orderForm" class="form-grid">
+            <input type="hidden" id="orderId" />
+            <label>
+              Produk
+              <select id="orderProduct" required></select>
+            </label>
+            <label>
+              Nama pelanggan
+              <input id="customerName" autocomplete="name" required placeholder="Nama lengkap" />
+            </label>
+            <label>
+              Nomor WhatsApp
+              <input id="customerPhone" inputmode="tel" required placeholder="08xxxxxxxxxx" />
+            </label>
+            <label>
+              Jumlah
+              <input id="quantity" type="number" min="1" max="20" value="1" required />
+            </label>
+            <label class="wide">
+              Alamat antar
+              <textarea id="address" rows="3" required placeholder="Nama jalan, nomor rumah, patokan"></textarea>
+            </label>
+            <div class="total-card neumorph">
+              <span>Total</span>
+              <strong id="orderTotal">Rp 0</strong>
+            </div>
+            <button class="primary-btn wide" type="submit">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              Simpan Pesanan
+            </button>
+          </form>
+        </aside>
+      </section>
+
+      <section class="route" id="trackRoute" data-page="track">
+        <div class="page-shell">
+          <section class="glass-panel page-heading">
+            <p class="eyebrow">Lacak pesanan</p>
+            <h1>Status pengantaran</h1>
+            <p>Masukkan nomor WhatsApp yang dipakai saat memesan.</p>
+          </section>
+
+          <section class="glass-panel tracker">
+            <form id="trackForm" class="search-row">
+              <label>
+                Nomor WhatsApp
+                <input id="trackPhone" inputmode="tel" placeholder="08xxxxxxxxxx" required />
+              </label>
+              <button class="primary-btn" type="submit">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M21 21l-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" />
+                </svg>
+                Cari
+              </button>
+            </form>
+            <div class="order-list" id="trackResults"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="route" id="adminRoute" data-page="admin">
+        <div class="admin-layout">
+          <aside class="admin-sidebar glass-panel">
+            <div class="brand admin-brand">
+              <span class="brand-mark">B</span>
+              <span>
+                <strong>Depot Air Bintang</strong>
+                <small>Admin panel</small>
+              </span>
+            </div>
+            <div class="admin-tabs" role="tablist" aria-label="Menu admin">
+              <button class="tab active" type="button" data-admin-tab="dashboard">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M4 13h6V4H4v9Zm10 7h6V4h-6v16ZM4 20h6v-3H4v3Z" />
+                </svg>
+                Dashboard
+              </button>
+              <button class="tab" type="button" data-admin-tab="products">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M6 2h12l2 7v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9l2-7Zm0 7h12M9 13h6" />
+                </svg>
+                Produk
+              </button>
+              <button class="tab" type="button" data-admin-tab="orders">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+                </svg>
+                Pesanan
+              </button>
+            </div>
+            <button class="ghost-btn" id="logoutBtn" type="button">Keluar</button>
+          </aside>
+
+          <section class="admin-content">
+            <div id="loginPanel" class="glass-panel login-panel">
+              <p class="eyebrow">Akses admin</p>
+              <h1>Masuk Dashboard</h1>
+              <form id="loginForm" class="form-grid single">
+                <label>
+                  Email
+                  <input id="adminEmail" type="email" autocomplete="username" required placeholder="admin@bintang.local" />
+                </label>
+                <label>
+                  Password
+                  <input id="adminPassword" type="password" autocomplete="current-password" required placeholder="Password" />
+                </label>
+                <button class="primary-btn" type="submit">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" />
+                  </svg>
+                  Masuk
+                </button>
+              </form>
+            </div>
+
+            <div id="adminPanel" class="hidden">
+              <section class="admin-page active" id="dashboardPanel">
+                <div class="page-title">
+                  <div>
+                    <p class="eyebrow">Ringkasan</p>
+                    <h1>Dashboard depot</h1>
+                  </div>
+                  <button class="ghost-btn" id="seedBtn" type="button">Reset Data Demo</button>
+                </div>
+                <div class="metric-grid">
+                  <article class="metric-card glass-panel">
+                    <span>Total pesanan</span>
+                    <strong id="metricOrders">0</strong>
+                  </article>
+                  <article class="metric-card glass-panel">
+                    <span>Pendapatan</span>
+                    <strong id="metricRevenue">Rp 0</strong>
+                  </article>
+                  <article class="metric-card glass-panel">
+                    <span>Dalam proses</span>
+                    <strong id="metricProcess">0</strong>
+                  </article>
+                  <article class="metric-card glass-panel">
+                    <span>Produk aktif</span>
+                    <strong id="metricProducts">0</strong>
+                  </article>
+                </div>
+                <div class="dashboard-grid">
+                  <section class="glass-panel">
+                    <div class="panel-heading">
+                      <h2>Pesanan terbaru</h2>
+                    </div>
+                    <div class="order-list compact" id="recentOrders"></div>
+                  </section>
+                  <section class="glass-panel">
+                    <div class="panel-heading">
+                      <h2>Stok produk</h2>
+                    </div>
+                    <div class="stock-list" id="stockList"></div>
+                  </section>
+                </div>
+              </section>
+
+              <section class="admin-page" id="productsPanel">
+                <div class="page-title">
+                  <div>
+                    <p class="eyebrow">CRUD</p>
+                    <h1>Kelola produk</h1>
+                  </div>
+                </div>
+                <div class="management-grid">
+                  <form id="productForm" class="glass-panel form-grid single">
+                    <input type="hidden" id="productId" />
+                    <label>
+                      Nama produk
+                      <input id="productName" required placeholder="Galon Bintang Mineral" />
+                    </label>
+                    <label>
+                      Ukuran
+                      <input id="productSize" required placeholder="19 liter" />
+                    </label>
+                    <label>
+                      Harga
+                      <input id="productPrice" type="number" min="0" step="500" required />
+                    </label>
+                    <label>
+                      Stok
+                      <input id="productStock" type="number" min="0" required />
+                    </label>
+                    <label>
+                      Tema visual
+                      <select id="productTheme">
+                        <option value="mineral">Mineral biru</option>
+                        <option value="alkali">Alkali hijau</option>
+                        <option value="dispenser">Paket dispenser</option>
+                      </select>
+                    </label>
+                    <label>
+                      Deskripsi
+                      <textarea id="productDescription" rows="3" required></textarea>
+                    </label>
+                    <div class="button-row">
+                      <button class="primary-btn" type="submit">
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z" />
+                          <path d="M17 21v-8H7v8M7 3v5h8" />
+                        </svg>
+                        Simpan Produk
+                      </button>
+                      <button class="ghost-btn" id="cancelProductEdit" type="button">Batal</button>
+                    </div>
+                  </form>
+                  <div class="glass-panel table-panel">
+                    <div class="panel-heading">
+                      <h2>Daftar produk</h2>
+                    </div>
+                    <div class="responsive-table" id="productsTable"></div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="admin-page" id="ordersPanel">
+                <div class="page-title">
+                  <div>
+                    <p class="eyebrow">Operasional</p>
+                    <h1>Kelola pesanan</h1>
+                  </div>
+                </div>
+                <div class="glass-panel table-panel">
+                  <div class="panel-heading">
+                    <h2>Semua pesanan</h2>
+                    <select id="statusFilter" aria-label="Filter status">
+                      <option value="all">Semua status</option>
+                      <option value="Menunggu">Menunggu</option>
+                      <option value="Diproses">Diproses</option>
+                      <option value="Diantar">Diantar</option>
+                      <option value="Selesai">Selesai</option>
+                      <option value="Batal">Batal</option>
+                    </select>
+                  </div>
+                  <div class="responsive-table" id="ordersTable"></div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
